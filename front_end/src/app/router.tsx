@@ -5,6 +5,8 @@ import Layout from "../pages/layout/Layout.tsx";
 import CollectionPage from "../pages/collection/CollectionPage.tsx";
 import ProductDetailPage from "../pages/product_detail/ProductDetailPage.tsx";
 import CustomizationPage from "../pages/customization/CustomizationPage.tsx";
+import GlbViewerPage from "../pages/glbviewer/GlbViewerPage.tsx";
+import CadViewerPage from "../pages/cadviewer/CadViewerPage.tsx";
 
 
 
@@ -33,6 +35,15 @@ export const router = createBrowserRouter([
                 path: "customize",
                 element: <CustomizationPage />,
             },
+            {
+                path: "/glb-viewer",
+                element: <GlbViewerPage />,
+            },
+            {
+                path: "/cad-viewer",
+                element: <CadViewerPage />,
+            }
+
         ],
     },
 ]);

@@ -1,6 +1,6 @@
 import type { CollectionProduct } from "../types/product";
 import ring1 from "../../../assets/반지1.jpg";
-import test1 from "../../../assets/네잎클로버2.jpg";
+import test1 from "../../../assets/벨라메종1.jpg";
 
 export const collectionProducts: CollectionProduct[] = [
     {

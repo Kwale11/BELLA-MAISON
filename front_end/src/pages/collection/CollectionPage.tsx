@@ -17,6 +17,8 @@ export default function CollectionPage() {
         filters,
         sort,
         filteredProducts,
+        loading,
+        error,
         hasActiveFilters,
         setCategory,
         setMaterial,
@@ -73,10 +75,16 @@ export default function CollectionPage() {
                             }}
                         />
 
-                        <CollectionProductGrid
-                            products={filteredProducts}
-                            onResetFilters={resetFilters}
-                        />
+                        {loading ? (
+                            <p role="status">상품을 불러오는 중입니다.</p>
+                        ) : error ? (
+                            <p role="alert">{error.message}</p>
+                        ) : (
+                            <CollectionProductGrid
+                                products={filteredProducts}
+                                onResetFilters={resetFilters}
+                            />
+                        )}
                     </div>
                 </div>
             </section>

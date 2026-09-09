@@ -2,7 +2,7 @@ import { MapPin } from "lucide-react";
 
 import type { StoreInformation } from "../types/store";
 
-import reservationImage from "../../../assets/네잎클로버2.jpg";
+import reservationImage from "../../../assets/벨라메종8.jpg";
 
 import "./css/ReservationHero.css";
 

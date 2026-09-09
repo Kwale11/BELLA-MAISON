@@ -18,7 +18,11 @@ export const mainNavigationItems: NavigationItem[] = [
         href: "/reservation",
     },
     {
-        label: "Journal",
-        href: "/journal",
+        label: "Viewer",
+        href: "/glb-viewer",
+    },
+    {
+        label: "cadViewer",
+        href: "/cad-viewer",
     },
 ];
