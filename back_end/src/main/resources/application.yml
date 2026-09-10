@@ -1,0 +1,40 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: bella-maison
+
+  datasource:
+    url: "jdbc:mysql://localhost:3306/bella_maison?sslMode=DISABLED&allowPublicKeyRetrieval=true&connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true&characterEncoding=UTF-8"
+    username: bella_app
+    password: "1111"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
+
+  sql:
+    init:
+      mode: never
+
+#  flyway:
+#    enabled: true
+#    locations: classpath:db/migration
+#    validate-on-migrate: true
+#    clean-disabled: true
+    flyway:
+      enabled: false
+app:
+  cors:
+    allowed-origins: ${FRONTEND_ORIGINS:http://localhost:5173,http://127.0.0.1:5173}
+
+  store:
+    name: 벨라메종
+    address: 홍산남로 28 102호
+    phone: 0507-1394-2592
+    naver-reservation-url: ${NAVER_RESERVATION_URL:https://map.naver.com/p/entry/place/1640127932}
+    kakao-channel-url: ${KAKAO_CHANNEL_URL:}
+    map-url: https://map.naver.com/p/entry/place/1640127932
